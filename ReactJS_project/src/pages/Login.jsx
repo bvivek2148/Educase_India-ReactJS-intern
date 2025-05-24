@@ -187,7 +187,10 @@ const Login = () => {
             }`}
             style={{ transitionDelay: "700ms" }}
           >
-            <button className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 font-medium transition-colors duration-200">
+            <button
+              className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 font-medium transition-colors duration-200"
+              onClick={() => navigate('/forgot-password')}
+            >
               Forgot Password?
             </button>
             <div className="flex items-center justify-center space-x-2">

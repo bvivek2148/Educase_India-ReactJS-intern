@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ThemeBtn from "../components/ThemeBtn";
+import { motion } from 'framer-motion';
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,12 +24,11 @@ const Home = () => {
       <div className="flex items-center justify-center min-h-screen px-4 py-8">
         <div className="w-full max-w-sm mx-auto">
           {/* Logo/Icon Area */}
-          <div
-            className={`mb-16 text-center transform transition-all duration-1000 ease-out ${
-              isVisible
-                ? "translate-y-0 opacity-100 scale-100"
-                : "translate-y-8 opacity-0 scale-95"
-            }`}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="mb-16 text-center"
           >
             <div className="relative">
               <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-purple-500 to-blue-600 dark:from-purple-400 dark:to-blue-500 rounded-3xl shadow-2xl transform transition-all duration-700 hover:scale-105 hover:rotate-3">
@@ -50,16 +50,14 @@ const Home = () => {
                 style={{ animationDelay: "1s", animationDuration: "3s" }}
               ></div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Welcome Text */}
-          <div
-            className={`text-center mb-12 transform transition-all duration-1000 ease-out ${
-              isVisible
-                ? "translate-y-0 opacity-100"
-                : "translate-y-6 opacity-0"
-            }`}
-            style={{ transitionDelay: "200ms" }}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-center mb-12"
           >
             <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight">
               Welcome to{" "}
@@ -71,46 +69,40 @@ const Home = () => {
               Lorem ipsum dolor sit amet, <br className="hidden sm:block" />
               consectetur adipiscing elit,
             </p>
-          </div>
+          </motion.div>
 
           {/* Buttons Container */}
           <div className="space-y-4">
             {/* Create Account Button */}
-            <button
-              className={`w-full bg-gradient-to-r from-purple-600 to-blue-600 dark:from-purple-500 dark:to-blue-500 hover:from-purple-700 hover:to-blue-700 dark:hover:from-purple-600 dark:hover:to-blue-600 text-white font-semibold py-4 px-6 rounded-2xl shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 active:scale-95 ${
-                isVisible
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-4 opacity-0"
-              }`}
-              style={{ transitionDelay: "400ms" }}
+            <motion.button
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="w-full bg-gradient-to-r from-purple-600 to-blue-600 dark:from-purple-500 dark:to-blue-500 hover:from-purple-700 hover:to-blue-700 dark:hover:from-purple-600 dark:hover:to-blue-600 text-white font-semibold py-4 px-6 rounded-2xl shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 active:scale-95"
               onClick={() => navigate("/register")}
             >
               <span className="relative z-10">Create Account</span>
               <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-blue-400 rounded-2xl opacity-0 hover:opacity-20 transition-opacity duration-300"></div>
-            </button>
+            </motion.button>
 
             {/* Login Button */}
-            <button
-              className={`w-full bg-purple-100 dark:bg-gray-700 hover:bg-purple-200 dark:hover:bg-gray-600 text-purple-700 dark:text-purple-300 font-semibold py-4 px-6 rounded-2xl shadow-md hover:shadow-lg transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 active:scale-95 ${
-                isVisible
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-4 opacity-0"
-              }`}
-              style={{ transitionDelay: "500ms" }}
+            <motion.button
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="w-full bg-purple-100 dark:bg-gray-700 hover:bg-purple-200 dark:hover:bg-gray-600 text-purple-700 dark:text-purple-300 font-semibold py-4 px-6 rounded-2xl shadow-md hover:shadow-lg transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 active:scale-95"
               onClick={() => navigate("/login")}
             >
               <span className="relative z-10">Already Registered? Login</span>
-            </button>
+            </motion.button>
           </div>
 
           {/* Bottom Decorative Elements */}
-          <div
-            className={`mt-12 flex justify-center space-x-2 transform transition-all duration-1000 ease-out ${
-              isVisible
-                ? "translate-y-0 opacity-100"
-                : "translate-y-4 opacity-0"
-            }`}
-            style={{ transitionDelay: "700ms" }}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.7 }}
+            className="mt-12 flex justify-center space-x-2"
           >
             <div
               className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"
@@ -124,7 +116,7 @@ const Home = () => {
               className="w-2 h-2 bg-purple-300 rounded-full animate-pulse"
               style={{ animationDelay: "1s" }}
             ></div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
