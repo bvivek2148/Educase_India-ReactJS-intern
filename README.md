@@ -9,7 +9,7 @@ This project demonstrates a **pixel-perfect React implementation** of the provid
 
 ## 🔗 Deployment & Source Code
 
-- 🚀 **Live Demo**: [https://educase-reactjs.onrender.com](https://educase-reactjs.onrender.com)  
+- 🚀 **Live Demo**: [link](link)  
 - 📂 **GitHub Repository**: [github.com/bvivek2148/Educase_India-ReactJS-intern](https://github.com/bvivek2148/Educase_India-ReactJS-intern.git)  
 - 🎨 **Design Reference**: [Adobe XD Design](https://xd.adobe.com/view/b68eea25-003d-4a5d-8fdd-d463eeb20b32-e3dd)
 
