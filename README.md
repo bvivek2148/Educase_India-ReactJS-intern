@@ -18,20 +18,7 @@
 - **Routing**: React Router
 - **Hosting**: Render
 
-## 📁 Getting Started
-To run the project locally:
 
-```bash
-# Clone the repository
-git clonehttps://github.com/bvivek2148/Educase_India-ReactJS-intern.git
-cd ReactJS_project
-
-# Install dependencies
-npm install
-
-# Start the development server
-npm run dev
-```
 
 ## Project Structure
 ```
@@ -47,6 +34,22 @@ ReactJS_project/
 ├── package.json         # Project dependencies and scripts
 ├── vite.config.js       # Vite configuration for build and development
 └── README.md            # Project documentation
+```
+
+
+## 📁 Getting Started
+To run the project locally:
+
+```bash
+# Clone the repository
+git clonehttps://github.com/bvivek2148/Educase_India-ReactJS-intern.git
+cd ReactJS_project
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
 ```
 
 ## Contributing
